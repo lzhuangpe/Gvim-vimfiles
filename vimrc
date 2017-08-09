@@ -5,7 +5,8 @@ let mapleader = ','
 let g:mapleader = ','
 
 
-set rtp+=~/vimfiles/bundle/Vundle.vim
+set rtp+=~/vimfiles/bundle
+" set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
