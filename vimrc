@@ -6,7 +6,7 @@ let g:mapleader = ','
 
 
 set rtp+=$HOME/vimfiles/bundle
-call vundle#begin('$HOME/vimfiles/bundle/')
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
