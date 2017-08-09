@@ -1,6 +1,6 @@
-"{{{ Vundle ¼ÓÔØ²å¼ş
+"{{{ Vundle åŠ è½½æ’ä»¶
 
-" ĞŞ¸Äleader¼ü
+" ä¿®æ”¹leaderé”®
 let mapleader = ','
 let g:mapleader = ','
 
@@ -8,56 +8,68 @@ let g:mapleader = ','
 set rtp+=$HOME/vimfiles/bundle
 call vundle#begin('$HOME/vimfiles/bundle/')
 
+" æ’ä»¶ç®¡ç†
 Plugin 'VundleVim/Vundle.vim'
+" æ–‡ä»¶ç®¡ç†
 Plugin 'scrooloose/nerdtree'
+" çŠ¶æ€æ  
 Plugin 'vim-airline/vim-airline'
+" æ–‡ä»¶æœç´¢ 
 Plugin 'kien/ctrlp.vim'
-
-
+" å¿«é€Ÿæ‰§è¡Œ
+Plugin 'thinca/vim-quickrun'
+" æˆå¯¹æ ‡ç­¾è¡¥å…¨
+Plugin 'docunext/closetag.vim'
+" å¿«é€Ÿæ³¨é‡Š
+Plugin 'scrooloose/nerdcommenter'
+" æ‹¬å·é«˜äº®
+Plugin 'kien/rainbow_parentheses.vim'
+" ç¬¦å·è‡ªåŠ¨è¡¥å…¨
+Plugin 'Raimondi/delimitMate'
 call vundle#end()
 filetype plugin indent on
 
 "}}}
 
 
-"{{{»ù´¡ÉèÖÃ
+"{{{åŸºç¡€è®¾ç½®
 
-" ¿ªÆôÓï·¨¸ßÁÁ
+" å¼€å¯è¯­æ³•é«˜äº®
 syntax on
-" history´æ´¢ÈİÁ¿
+" historyå­˜å‚¨å®¹é‡
 set history=2000
-" ¼ì²âÎÄ¼şÀàĞÍ
+" æ£€æµ‹æ–‡ä»¶ç±»å‹
 filetype on
-" Õë¶Ô²»Í¬µÄÎÄ¼şÀàĞÍ²ÉÓÃ²»Í¬µÄËõ½ø¸ñÊ½
+" é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶ç±»å‹é‡‡ç”¨ä¸åŒçš„ç¼©è¿›æ ¼å¼
 filetype indent on
-" ÔÊĞí²å¼ş
+" å…è®¸æ’ä»¶
 filetype plugin on
-" Æô¶¯×Ô¶¯²¹È«
+" å¯åŠ¨è‡ªåŠ¨è¡¥å…¨
 filetype plugin indent on
-" ÎÄ¼şĞŞ¸ÄÖ®ºó×Ô¶¯ÔØÈë
+" æ–‡ä»¶ä¿®æ”¹ä¹‹åè‡ªåŠ¨è½½å…¥
 set autoread
 
 
-" Æô¶¯µÄÊ±ºò²»ÏÔÊ¾ÄÇ¸öÔ®ÖúÎÚ¸É´ï¶ùÍ¯µÄÌáÊ¾
+" å¯åŠ¨çš„æ—¶å€™ä¸æ˜¾ç¤ºé‚£ä¸ªæ´åŠ©ä¹Œå¹²è¾¾å„¿ç«¥çš„æç¤º
 set shortmess=atI
-" ¹Ø±Õ½»»»ÎÄ¼ş
+" å…³é—­äº¤æ¢æ–‡ä»¶
 set noswapfile
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 
-"Í»³öÏÔÊ¾µ±Ç°ĞĞ"
+"çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ"
 set cursorline
-"Í»³öÏÔÊ¾µ±Ç°ÁĞ"
+"çªå‡ºæ˜¾ç¤ºå½“å‰åˆ—"
 set cursorcolumn
 
 
-" Êó±êÔİ²»ÆôÓÃ, ¼üÅÌµ³....
+" é¼ æ ‡æš‚ä¸å¯ç”¨, é”®ç›˜å…š....
 set mouse-=a
-" ¿ªÆôÊó±ê
+" å¼€å¯é¼ æ ‡
 "set mouse=a
 
 
-" È¥µôÊäÈë´íÎóµÄÌáÊ¾ÉùÒô
+" å»æ‰è¾“å…¥é”™è¯¯çš„æç¤ºå£°éŸ³
 set novisualbell
 set noerrorbells
 set t_vb=
@@ -75,54 +87,54 @@ set whichwrap+=<,>,h,l
 "}}}
 
 
-"{{{ ÏÔÊ¾/ÅÅ°æÉèÖÃ
+"{{{ æ˜¾ç¤º/æ’ç‰ˆè®¾ç½®
 
-" ÏÔÊ¾µ±Ç°µÄĞĞºÅÁĞºÅ
+" æ˜¾ç¤ºå½“å‰çš„è¡Œå·åˆ—å·
 set ruler
-" ÔÚ×´Ì¬À¸ÏÔÊ¾ÕıÔÚÊäÈëµÄÃüÁî
+" åœ¨çŠ¶æ€æ æ˜¾ç¤ºæ­£åœ¨è¾“å…¥çš„å‘½ä»¤
 set showcmd
-" ×óÏÂ½ÇÏÔÊ¾µ±Ç°vimÄ£Ê½
+" å·¦ä¸‹è§’æ˜¾ç¤ºå½“å‰vimæ¨¡å¼
 set showmode
-" ÔÚÉÏÏÂÒÆ¶¯¹â±êÊ±£¬¹â±êµÄÉÏ·½»òÏÂ·½ÖÁÉÙ»á±£ÁôÏÔÊ¾µÄĞĞÊı
+" åœ¨ä¸Šä¸‹ç§»åŠ¨å…‰æ ‡æ—¶ï¼Œå…‰æ ‡çš„ä¸Šæ–¹æˆ–ä¸‹æ–¹è‡³å°‘ä¼šä¿ç•™æ˜¾ç¤ºçš„è¡Œæ•°
 set scrolloff=7
 
-" ÃüÁîĞĞ£¨ÔÚ×´Ì¬ĞĞÏÂ£©µÄ¸ß¶È£¬Ä¬ÈÏÎª1£¬ÕâÀïÊÇ2
+" å‘½ä»¤è¡Œï¼ˆåœ¨çŠ¶æ€è¡Œä¸‹ï¼‰çš„é«˜åº¦ï¼Œé»˜è®¤ä¸º1ï¼Œè¿™é‡Œæ˜¯2
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 " Always show the status line - use 2 lines for the status bar
 set laststatus=2
 
-" ÏÔÊ¾ĞĞºÅ
+" æ˜¾ç¤ºè¡Œå·
 set number
-" È¡Ïû»»ĞĞ
+" å–æ¶ˆæ¢è¡Œ
 set nowrap
 
-" À¨ºÅÅä¶ÔÇé¿ö, Ìø×ª²¢¸ßÁÁÒ»ÏÂÆ¥ÅäµÄÀ¨ºÅ
+" æ‹¬å·é…å¯¹æƒ…å†µ, è·³è½¬å¹¶é«˜äº®ä¸€ä¸‹åŒ¹é…çš„æ‹¬å·
 set showmatch
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
-" ÉèÖÃÎÄÄÚÖÇÄÜËÑË÷ÌáÊ¾
-" ¸ßÁÁsearchÃüÖĞµÄÎÄ±¾
+" è®¾ç½®æ–‡å†…æ™ºèƒ½æœç´¢æç¤º
+" é«˜äº®searchå‘½ä¸­çš„æ–‡æœ¬
 set hlsearch
-" ´ò¿ªÔöÁ¿ËÑË÷Ä£Ê½,Ëæ×Å¼üÈë¼´Ê±ËÑË÷
+" æ‰“å¼€å¢é‡æœç´¢æ¨¡å¼,éšç€é”®å…¥å³æ—¶æœç´¢
 set incsearch
-" ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´
+" æœç´¢æ—¶å¿½ç•¥å¤§å°å†™
 set ignorecase
-" ÓĞÒ»¸ö»òÒÔÉÏ´óĞ´×ÖÄ¸Ê±ÈÔ´óĞ¡Ğ´Ãô¸Ğ
+" æœ‰ä¸€ä¸ªæˆ–ä»¥ä¸Šå¤§å†™å­—æ¯æ—¶ä»å¤§å°å†™æ•æ„Ÿ
 set smartcase
 
 
-" ´úÂëÕÛµş
+" ä»£ç æŠ˜å 
 set foldenable
-" ÕÛµş·½·¨
-" manual    ÊÖ¹¤ÕÛµş
-" indent    Ê¹ÓÃËõ½ø±íÊ¾ÕÛµş
-" expr      Ê¹ÓÃ±í´ïÊ½¶¨ÒåÕÛµş
-" syntax    Ê¹ÓÃÓï·¨¶¨ÒåÕÛµş
-" diff      ¶ÔÃ»ÓĞ¸ü¸ÄµÄÎÄ±¾½øĞĞÕÛµş
-" marker    Ê¹ÓÃ±ê¼Ç½øĞĞÕÛµş, Ä¬ÈÏ±ê¼ÇÊÇ {{{ ºÍ }}}
+" æŠ˜å æ–¹æ³•
+" manual    æ‰‹å·¥æŠ˜å 
+" indent    ä½¿ç”¨ç¼©è¿›è¡¨ç¤ºæŠ˜å 
+" expr      ä½¿ç”¨è¡¨è¾¾å¼å®šä¹‰æŠ˜å 
+" syntax    ä½¿ç”¨è¯­æ³•å®šä¹‰æŠ˜å 
+" diff      å¯¹æ²¡æœ‰æ›´æ”¹çš„æ–‡æœ¬è¿›è¡ŒæŠ˜å 
+" marker    ä½¿ç”¨æ ‡è®°è¿›è¡ŒæŠ˜å , é»˜è®¤æ ‡è®°æ˜¯ {{{ å’Œ }}}
 set foldmethod=marker
 set foldlevel=99
-" ´úÂëÕÛµş×Ô¶¨Òå¿ì½İ¼ü <leader>zz
+" ä»£ç æŠ˜å è‡ªå®šä¹‰å¿«æ·é”® <leader>zz
 let g:FoldMethod = 0
 map <leader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
@@ -136,25 +148,25 @@ fun! ToggleFold()
 endfun
 
 
-" Ëõ½øÅäÖÃ
+" ç¼©è¿›é…ç½®
 " Smart indent
 set smartindent
-" ´ò¿ª×Ô¶¯Ëõ½ø
+" æ‰“å¼€è‡ªåŠ¨ç¼©è¿›
 " never add copyindent, case error   " copy the previous indentation on autoindenting
 set autoindent
 
-" tabÏà¹Ø±ä¸ü
-" ÉèÖÃTab¼üµÄ¿í¶È        [µÈÍ¬µÄ¿Õ¸ñ¸öÊı]
+" tabç›¸å…³å˜æ›´
+" è®¾ç½®Tabé”®çš„å®½åº¦        [ç­‰åŒçš„ç©ºæ ¼ä¸ªæ•°]
 set tabstop=4
-" Ã¿Ò»´ÎËõ½ø¶ÔÓ¦µÄ¿Õ¸ñÊı
+" æ¯ä¸€æ¬¡ç¼©è¿›å¯¹åº”çš„ç©ºæ ¼æ•°
 set shiftwidth=4
-" °´ÍË¸ñ¼üÊ±¿ÉÒÔÒ»´ÎÉ¾µô 4 ¸ö¿Õ¸ñ
+" æŒ‰é€€æ ¼é”®æ—¶å¯ä»¥ä¸€æ¬¡åˆ æ‰ 4 ä¸ªç©ºæ ¼
 set softtabstop=4
-" insert tabs on the start of a line according to shiftwidth, not tabstop °´ÍË¸ñ¼üÊ±¿ÉÒÔÒ»´ÎÉ¾µô 4 ¸ö¿Õ¸ñ
+" insert tabs on the start of a line according to shiftwidth, not tabstop æŒ‰é€€æ ¼é”®æ—¶å¯ä»¥ä¸€æ¬¡åˆ æ‰ 4 ä¸ªç©ºæ ¼
 set smarttab
-" ½«Tab×Ô¶¯×ª»¯³É¿Õ¸ñ[ĞèÒªÊäÈëÕæÕıµÄTab¼üÊ±£¬Ê¹ÓÃ Ctrl+V + Tab]
+" å°†Tabè‡ªåŠ¨è½¬åŒ–æˆç©ºæ ¼[éœ€è¦è¾“å…¥çœŸæ­£çš„Tabé”®æ—¶ï¼Œä½¿ç”¨ Ctrl+V + Tab]
 set expandtab
-" Ëõ½øÊ±£¬È¡Õû use multiple of shiftwidth when indenting with '<' and '>'
+" ç¼©è¿›æ—¶ï¼Œå–æ•´ use multiple of shiftwidth when indenting with '<' and '>'
 set shiftround
 
 " A buffer becomes hidden when it is abandoned
@@ -162,14 +174,14 @@ set hidden
 set wildmode=list:longest
 set ttyfast
 
-" 00xÔö¼õÊı×ÖÊ±Ê¹ÓÃÊ®½øÖÆ
+" 00xå¢å‡æ•°å­—æ—¶ä½¿ç”¨åè¿›åˆ¶
 set nrformats=
 
-" Ïà¶ÔĞĞºÅ: ĞĞºÅ±ä³ÉÏà¶Ô£¬¿ÉÒÔÓÃ nj/nk ½øĞĞÌø×ª
+" ç›¸å¯¹è¡Œå·: è¡Œå·å˜æˆç›¸å¯¹ï¼Œå¯ä»¥ç”¨ nj/nk è¿›è¡Œè·³è½¬
 set relativenumber number
 au FocusLost * :set norelativenumber number
 au FocusGained * :set relativenumber
-" ²åÈëÄ£Ê½ÏÂÓÃ¾ø¶ÔĞĞºÅ, ÆÕÍ¨Ä£Ê½ÏÂÓÃÏà¶Ô
+" æ’å…¥æ¨¡å¼ä¸‹ç”¨ç»å¯¹è¡Œå·, æ™®é€šæ¨¡å¼ä¸‹ç”¨ç›¸å¯¹
 autocmd InsertEnter * :set norelativenumber number
 autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
@@ -181,7 +193,7 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
-" ·ÀÖ¹tmuxÏÂvimµÄ±³¾°É«ÏÔÊ¾Òì³£
+" é˜²æ­¢tmuxä¸‹vimçš„èƒŒæ™¯è‰²æ˜¾ç¤ºå¼‚å¸¸
 " Refer: http://sunaku.github.io/vim-256color-bce.html
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
@@ -193,29 +205,29 @@ endif
 "}}}
 
 
-" {{{ ÎÄ¼ş±àÂë/¸ñÊ½
+" {{{ æ–‡ä»¶ç¼–ç /æ ¼å¼
 
-" ÉèÖÃĞÂÎÄ¼şµÄ±àÂëÎª UTF-8
+" è®¾ç½®æ–°æ–‡ä»¶çš„ç¼–ç ä¸º UTF-8
 set encoding=utf-8
-" ×Ô¶¯ÅĞ¶Ï±àÂëÊ±£¬ÒÀ´Î³¢ÊÔÒÔÏÂ±àÂë£º
+" è‡ªåŠ¨åˆ¤æ–­ç¼–ç æ—¶ï¼Œä¾æ¬¡å°è¯•ä»¥ä¸‹ç¼–ç ï¼š
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set helplang=cn
 "set?langmenu=zh_CN.UTF-8
 "set enc=2byte-gb18030
-" ÏÂÃæÕâ¾äÖ»Ó°ÏìÆÕÍ¨Ä£Ê½ (·ÇÍ¼ĞÎ½çÃæ) ÏÂµÄ Vim
+" ä¸‹é¢è¿™å¥åªå½±å“æ™®é€šæ¨¡å¼ (éå›¾å½¢ç•Œé¢) ä¸‹çš„ Vim
 set termencoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-" ÈçÓöUnicodeÖµ´óÓÚ255µÄÎÄ±¾£¬²»±ØµÈµ½¿Õ¸ñÔÙÕÛĞĞ
+" å¦‚é‡Unicodeå€¼å¤§äº255çš„æ–‡æœ¬ï¼Œä¸å¿…ç­‰åˆ°ç©ºæ ¼å†æŠ˜è¡Œ
 set formatoptions+=m
-" ºÏ²¢Á½ĞĞÖĞÎÄÊ±£¬²»ÔÚÖĞ¼ä¼Ó¿Õ¸ñ
+" åˆå¹¶ä¸¤è¡Œä¸­æ–‡æ—¶ï¼Œä¸åœ¨ä¸­é—´åŠ ç©ºæ ¼
 set formatoptions+=B
 " }}}
 
 
-" {{{ Ö÷ÌâÉèÖÃ
+" {{{ ä¸»é¢˜è®¾ç½®
 
 
 " Set extra options when running in GUI mode
@@ -236,20 +248,20 @@ if has("gui_running")
 endif
 
 
-" themeÖ÷Ìâ
+" themeä¸»é¢˜
 set background=dark
 set t_Co=256
 colorscheme solarized
 
-" ×ÖÌåÉèÖÃ
-set guifont="ËÎÌå":h11
+" å­—ä½“è®¾ç½®
+set guifont="å®‹ä½“":h11
 
-" ÉèÖÃ±ê¼ÇÒ»ÁĞµÄ±³¾°ÑÕÉ«ºÍÊı×ÖÒ»ĞĞÑÕÉ«Ò»ÖÂ
+" è®¾ç½®æ ‡è®°ä¸€åˆ—çš„èƒŒæ™¯é¢œè‰²å’Œæ•°å­—ä¸€è¡Œé¢œè‰²ä¸€è‡´
 hi! link SignColumn   LineNr
 hi! link ShowMarksHLl DiffAdd
 hi! link ShowMarksHLu DiffChange
 
-" for error highlight£¬·ÀÖ¹´íÎóÕûĞĞ±êºìµ¼ÖÂ¿´²»Çå
+" for error highlightï¼Œé˜²æ­¢é”™è¯¯æ•´è¡Œæ ‡çº¢å¯¼è‡´çœ‹ä¸æ¸…
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
 highlight clear SpellCap
@@ -261,42 +273,42 @@ highlight SpellLocal term=underline cterm=underline
 " }}}
 
 
-" {{{ ´°¿ÚÉèÖÃ
+" {{{ çª—å£è®¾ç½®
 
-" ´°¿Ú´óĞ¡
+" çª—å£å¤§å°
 set lines=35 columns=140
-" ·Ö¸î³öÀ´µÄ´°¿ÚÎ»ÓÚµ±Ç°´°¿ÚÏÂ±ß/ÓÒ±ß
+" åˆ†å‰²å‡ºæ¥çš„çª—å£ä½äºå½“å‰çª—å£ä¸‹è¾¹/å³è¾¹
 set splitbelow
 set splitright
-"²»ÏÔÊ¾¹¤¾ß/²Ëµ¥À¸
+"ä¸æ˜¾ç¤ºå·¥å…·/èœå•æ 
 set guioptions-=T
 set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
-" Ê¹ÓÃÄÚÖÃ tab ÑùÊ½¶ø²»ÊÇ gui
+" ä½¿ç”¨å†…ç½® tab æ ·å¼è€Œä¸æ˜¯ gui
 set guioptions-=e
 set nolist
 " }}}
 
 
-" {{{ ÆäËûÉèÖÃ
+" {{{ å…¶ä»–è®¾ç½®
 
-" vimrcÎÄ¼şĞŞ¸ÄÖ®ºó×Ô¶¯¼ÓÔØ, windows
+" vimrcæ–‡ä»¶ä¿®æ”¹ä¹‹åè‡ªåŠ¨åŠ è½½, windows
 autocmd! bufwritepost _vimrc source %
-" vimrcÎÄ¼şĞŞ¸ÄÖ®ºó×Ô¶¯¼ÓÔØ, linux
+" vimrcæ–‡ä»¶ä¿®æ”¹ä¹‹åè‡ªåŠ¨åŠ è½½, linux
 autocmd! bufwritepost .vimrc source %
 
-" ×Ô¶¯²¹È«ÅäÖÃ
-" ÈÃVimµÄ²¹È«²Ëµ¥ĞĞÎªÓëÒ»°ãIDEÒ»ÖÂ(²Î¿¼VimTip1228)
+" è‡ªåŠ¨è¡¥å…¨é…ç½®
+" è®©Vimçš„è¡¥å…¨èœå•è¡Œä¸ºä¸ä¸€èˆ¬IDEä¸€è‡´(å‚è€ƒVimTip1228)
 set completeopt=longest,menu
 
-" ÔöÇ¿Ä£Ê½ÖĞµÄÃüÁîĞĞ×Ô¶¯Íê³É²Ù×÷
+" å¢å¼ºæ¨¡å¼ä¸­çš„å‘½ä»¤è¡Œè‡ªåŠ¨å®Œæˆæ“ä½œ
 set wildmenu
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc,*.class
 
-" »Ø³µ¼´Ñ¡ÖĞµ±Ç°Ïî
+" å›è½¦å³é€‰ä¸­å½“å‰é¡¹
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
  
 " In the quickfix window, <CR> is used to jump to the error under the
@@ -309,13 +321,13 @@ autocmd BufReadPost quickfix nnoremap <buffer> s <C-w><Enter><C-w>K
 " command-line window
 autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
 
-" ÉÏÏÂ×óÓÒ¼üµÄĞĞÎª »áÏÔÊ¾ÆäËûĞÅÏ¢
+" ä¸Šä¸‹å·¦å³é”®çš„è¡Œä¸º ä¼šæ˜¾ç¤ºå…¶ä»–ä¿¡æ¯
 inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
-" ´ò¿ª×Ô¶¯¶¨Î»µ½×îºó±à¼­µÄÎ»ÖÃ, ĞèÒªÈ·ÈÏ .viminfo µ±Ç°ÓÃ»§¿ÉĞ´
+" æ‰“å¼€è‡ªåŠ¨å®šä½åˆ°æœ€åç¼–è¾‘çš„ä½ç½®, éœ€è¦ç¡®è®¤ .viminfo å½“å‰ç”¨æˆ·å¯å†™
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -323,35 +335,32 @@ endif
 " }}}
 
 
-"{{{ ×Ô¶¨Òå¿ì½İ¼üÉèÖÃ
+"{{{ è‡ªå®šä¹‰å¿«æ·é”®è®¾ç½®
 
-" Ö÷Òª°´¼üÖØ¶¨Òå
+" ä¸»è¦æŒ‰é”®é‡å®šä¹‰
 
-" ¹Ø±Õ·½Ïò¼ü, Ç¿ÆÈ×Ô¼ºÓÃ hjkl
+" å…³é—­æ–¹å‘é”®, å¼ºè¿«è‡ªå·±ç”¨ hjkl
 map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
 "Treat long lines as break lines (useful when moving around in them)
-"se swapÖ®ºó£¬Í¬ÎïÀíĞĞÉÏÏßÖ±½ÓÌø
+"se swapä¹‹åï¼ŒåŒç‰©ç†è¡Œä¸Šçº¿ç›´æ¥è·³
 nnoremap k gk
 nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
-" F1 - F6 ÉèÖÃ
+" F1 - F6 è®¾ç½®
 
-" F1 ·ÏÆúÕâ¸ö¼ü,·ÀÖ¹µ÷³öÏµÍ³°ïÖú
+" F1 åºŸå¼ƒè¿™ä¸ªé”®,é˜²æ­¢è°ƒå‡ºç³»ç»Ÿå¸®åŠ©
 " I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
 noremap <F1> <Esc>"
 
-" ÉèÖÃNerdTree
-map <F1> :NERDTreeMirror<CR>
-map <F1> :NERDTreeToggle<CR>
 
-" F2 ĞĞºÅ¿ª¹Ø£¬ÓÃÓÚÊó±ê¸´ÖÆ´úÂëÓÃ
-" Îª·½±ã¸´ÖÆ£¬ÓÃ<F2>¿ªÆô/¹Ø±ÕĞĞºÅÏÔÊ¾:
+" F2 è¡Œå·å¼€å…³ï¼Œç”¨äºé¼ æ ‡å¤åˆ¶ä»£ç ç”¨
+" ä¸ºæ–¹ä¾¿å¤åˆ¶ï¼Œç”¨<F2>å¼€å¯/å…³é—­è¡Œå·æ˜¾ç¤º:
 function! HideNumber()
   if(&relativenumber == &number)
     set relativenumber! number!
@@ -364,13 +373,13 @@ function! HideNumber()
 endfunc
 nnoremap <F2> :call HideNumber()<CR>
 
-" F3 ÏÔÊ¾¿É´òÓ¡×Ö·û¿ª¹Ø
+" F3 æ˜¾ç¤ºå¯æ‰“å°å­—ç¬¦å¼€å…³
 nnoremap <F3> :set list! list?<CR>
-" F4 »»ĞĞ¿ª¹Ø
+" F4 æ¢è¡Œå¼€å…³
 nnoremap <F4> :set wrap! wrap?<CR>
 
 
-" F6 Óï·¨¿ª¹Ø£¬¹Ø±ÕÓï·¨¿ÉÒÔ¼Ó¿ì´óÎÄ¼şµÄÕ¹Ê¾
+" F6 è¯­æ³•å¼€å…³ï¼Œå…³é—­è¯­æ³•å¯ä»¥åŠ å¿«å¤§æ–‡ä»¶çš„å±•ç¤º
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
 set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
@@ -380,8 +389,8 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
 
-" F5 set pasteÎÊÌâÒÑ½â¾ö, Õ³Ìù´úÂëÇ°²»ĞèÒª°´F5ÁË
-" F5 Õ³ÌùÄ£Ê½paste_mode¿ª¹Ø,ÓÃÓÚÓĞ¸ñÊ½µÄ´úÂëÕ³Ìù
+" F5 set pasteé—®é¢˜å·²è§£å†³, ç²˜è´´ä»£ç å‰ä¸éœ€è¦æŒ‰F5äº†
+" F5 ç²˜è´´æ¨¡å¼paste_modeå¼€å…³,ç”¨äºæœ‰æ ¼å¼çš„ä»£ç ç²˜è´´
 " Automatically set paste mode in Vim when pasting in insert mode
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
@@ -390,7 +399,7 @@ function! XTermPasteBegin()
 endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
-" ·ÖÆÁ´°¿ÚÒÆ¶¯, Smart way to move between windows
+" åˆ†å±çª—å£ç§»åŠ¨, Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -418,19 +427,19 @@ nnoremap <silent> <Leader>z :ZoomToggle<CR>
 noremap H ^
 noremap L $
 
-" Map ; to : and save a million keystrokes ÓÃÓÚ¿ìËÙ½øÈëÃüÁîĞĞ
+" Map ; to : and save a million keystrokes ç”¨äºå¿«é€Ÿè¿›å…¥å‘½ä»¤è¡Œ
 nnoremap ; :
 
-" ÃüÁîĞĞÄ£Ê½ÔöÇ¿£¬ctrl - aµ½ĞĞÊ×£¬ -e µ½ĞĞÎ²
+" å‘½ä»¤è¡Œæ¨¡å¼å¢å¼ºï¼Œctrl - aåˆ°è¡Œé¦–ï¼Œ -e åˆ°è¡Œå°¾
 cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 
-" ËÑË÷Ïà¹Ø
+" æœç´¢ç›¸å…³
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-" ½øÈëËÑË÷Use sane regexes"
+" è¿›å…¥æœç´¢Use sane regexes"
 nnoremap / /\v
 vnoremap / /\v
 
@@ -441,31 +450,31 @@ nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
-" È¥µôËÑË÷¸ßÁÁ
+" å»æ‰æœç´¢é«˜äº®
 noremap <silent><leader>/ :nohls<CR>
 
 " switch # *
 nnoremap # *
 nnoremap * #
 
-" for # indent, pythonÎÄ¼şÖĞÊäÈëĞÂĞĞÊ±#ºÅ×¢ÊÍ²»ÇĞ»ØĞĞÊ×
+" for # indent, pythonæ–‡ä»¶ä¸­è¾“å…¥æ–°è¡Œæ—¶#å·æ³¨é‡Šä¸åˆ‡å›è¡Œé¦–
 autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
 
-" tab/bufferÏà¹Ø
+" tab/bufferç›¸å…³
 
-" ÇĞ»»Ç°ºóbuffer
+" åˆ‡æ¢å‰åbuffer
 nnoremap [b :bprevious<cr>
 nnoremap ]b :bnext<cr>
-" Ê¹ÓÃ·½Ïò¼üÇĞ»»buffer
+" ä½¿ç”¨æ–¹å‘é”®åˆ‡æ¢buffer
 noremap <left> :bp<CR>
 noremap <right> :bn<CR>
 
 
-" tab ²Ù×÷
+" tab æ“ä½œ
 " http://vim.wikia.com/wiki/Alternative_tab_navigation
 " http://stackoverflow.com/questions/2005214/switching-to-a-particular-tab-in-vim
 
-" tabÇĞ»»
+" tabåˆ‡æ¢
 map <leader>th :tabfirst<cr>
 map <leader>tl :tablast<cr>
 
@@ -478,7 +487,7 @@ map <leader>te :tabedit<cr>
 map <leader>td :tabclose<cr>
 map <leader>tm :tabm<cr>
 
-" normalÄ£Ê½ÏÂÇĞ»»µ½È·ÇĞµÄtab
+" normalæ¨¡å¼ä¸‹åˆ‡æ¢åˆ°ç¡®åˆ‡çš„tab
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -499,14 +508,14 @@ let g:last_active_tab = 1
 nnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
 autocmd TabLeave * let g:last_active_tab = tabpagenr()
 
-" ĞÂ½¨tab  Ctrl+t
+" æ–°å»ºtab  Ctrl+t
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 
-" => Ñ¡ÖĞ¼°²Ù×÷¸Ä¼ü
+" => é€‰ä¸­åŠæ“ä½œæ”¹é”®
 
-" µ÷ÕûËõ½øºó×Ô¶¯Ñ¡ÖĞ£¬·½±ãÔÙ´Î²Ù×÷
+" è°ƒæ•´ç¼©è¿›åè‡ªåŠ¨é€‰ä¸­ï¼Œæ–¹ä¾¿å†æ¬¡æ“ä½œ
 vnoremap < <gv
 vnoremap > >gv
 
@@ -514,16 +523,16 @@ vnoremap > >gv
 map Y y$
 
 
-" ¸´ÖÆÑ¡ÖĞÇøµ½ÏµÍ³¼ôÇĞ°åÖĞ
+" å¤åˆ¶é€‰ä¸­åŒºåˆ°ç³»ç»Ÿå‰ªåˆ‡æ¿ä¸­
 vnoremap <leader>y "+y
 
 " select all
 map <Leader>sa ggVG
 
-" Vim µÄÄ¬ÈÏ¼Ä´æÆ÷ºÍÏµÍ³¼ôÌù°å¹²Ïí
+" Vim çš„é»˜è®¤å¯„å­˜å™¨å’Œç³»ç»Ÿå‰ªè´´æ¿å…±äº«
 set clipboard+=unnamed
 
-" Ñ¡ÖĞ²¢¸ßÁÁ×îºóÒ»´Î²åÈëµÄÄÚÈİ
+" é€‰ä¸­å¹¶é«˜äº®æœ€åä¸€æ¬¡æ’å…¥çš„å†…å®¹
 nnoremap gv `[v`]
 
 " select block
@@ -532,14 +541,14 @@ nnoremap <leader>v V`}
 " w!! to sudo & write a file
 cmap w!! w !sudo tee >/dev/null %
 
-" ÉèÖÃ alt ¼ü²»Ó³Éäµ½²Ëµ¥À¸
+" è®¾ç½® alt é”®ä¸æ˜ å°„åˆ°èœå•æ 
 set winaltkeys=no
 
-" kj Ìæ»» Esc
+" kj æ›¿æ¢ Esc
 inoremap kj <Esc>
 
 
-" ¹ö¶¯Speed up scrolling of the viewport slightly
+" æ»šåŠ¨Speed up scrolling of the viewport slightly
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 
@@ -549,7 +558,7 @@ nnoremap <leader>q :q<CR>
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
 
-" ½»»» ' `, Ê¹µÃ¿ÉÒÔ¿ìËÙÊ¹ÓÃ'Ìøµ½markedÎ»ÖÃ
+" äº¤æ¢ ' `, ä½¿å¾—å¯ä»¥å¿«é€Ÿä½¿ç”¨'è·³åˆ°markedä½ç½®
 nnoremap ' `
 nnoremap ` '
 
@@ -567,10 +576,10 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " }}}
 
 
-"{{{ ÎÄ¼şÀàĞÍÉèÖÃ 
+"{{{ æ–‡ä»¶ç±»å‹è®¾ç½® 
 
 
-" ¾ßÌå±à¼­ÎÄ¼şÀàĞÍµÄÒ»°ãÉèÖÃ£¬±ÈÈç²»Òª tab µÈ
+" å…·ä½“ç¼–è¾‘æ–‡ä»¶ç±»å‹çš„ä¸€èˆ¬è®¾ç½®ï¼Œæ¯”å¦‚ä¸è¦ tab ç­‰
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby,javascript,html,css,xml set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
@@ -582,7 +591,7 @@ au BufWinEnter *.php set mps-=<:>
 
 
 
-" ±£´æpythonÎÄ¼şÊ±É¾³ı¶àÓà¿Õ¸ñ
+" ä¿å­˜pythonæ–‡ä»¶æ—¶åˆ é™¤å¤šä½™ç©ºæ ¼
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
@@ -592,15 +601,15 @@ endfun
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 
-" ¶¨Òåº¯ÊıAutoSetFileHead£¬×Ô¶¯²åÈëÎÄ¼şÍ·
+" å®šä¹‰å‡½æ•°AutoSetFileHeadï¼Œè‡ªåŠ¨æ’å…¥æ–‡ä»¶å¤´
 autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
 function! AutoSetFileHead()
-    "Èç¹ûÎÄ¼şÀàĞÍÎª.shÎÄ¼ş
+    "å¦‚æœæ–‡ä»¶ç±»å‹ä¸º.shæ–‡ä»¶
     if &filetype == 'sh'
         call setline(1, "\#!/bin/bash")
     endif
 
-    "Èç¹ûÎÄ¼şÀàĞÍÎªpython
+    "å¦‚æœæ–‡ä»¶ç±»å‹ä¸ºpython
     if &filetype == 'python'
         " call setline(1, "\#!/usr/bin/env python")
         " call append(1, "\# encoding: utf-8")
@@ -613,7 +622,7 @@ function! AutoSetFileHead()
 endfunc
 
 
-" ÉèÖÃ¿ÉÒÔ¸ßÁÁµÄ¹Ø¼ü×Ö
+" è®¾ç½®å¯ä»¥é«˜äº®çš„å…³é”®å­—
 if has("autocmd")
   " Highlight TODO, FIXME, NOTE, etc.
   if v:version > 701
@@ -623,4 +632,95 @@ if has("autocmd")
 endif
 
 
+"}}}
+
+
+"{{{ æ’ä»¶è®¾ç½®
+
+" è®¾ç½®NerdTree
+map <F1> :NERDTreeMirror<CR>
+map <F1> :NERDTreeToggle<CR>
+
+
+" è®¾ç½®AIRLINE[çŠ¶æ€æ å¢å¼º]
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '>>>'
+let g:airline_left_alt_sep = '>'
+let g:airline_right_sep = '<<<'
+let g:airline_right_alt_sep = '<'
+" æ˜¯å¦æ‰“å¼€tabline
+"let g:airline#extensions#tabline#enabled = 1
+
+
+" CTRLP[æ–‡ä»¶æœç´¢] 
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlP'
+map <leader>f :CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+
+
+" è®¾ç½®QUICKRUN[å¿«é€Ÿæ‰§è¡Œ]
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter" : "message",
+\   },
+\}
+let g:quickrun_no_default_key_mappings = 1
+nmap <Leader>r <Plug>(quickrun)
+map <F10> :QuickRun<CR>
+
+
+" è®¾ç½®CLOSETAG[æˆå¯¹æ ‡ç­¾è¡¥å…¨]
+let g:closetag_html_style=1
+
+
+" è®¾ç½®NERDCOMMENTER[å¿«é€Ÿæ³¨é‡Š]
+" æ³¨é‡Šçš„æ—¶å€™è‡ªåŠ¨åŠ ä¸ªç©ºæ ¼, å¼ºè¿«ç—‡å¿…é…
+let g:NERDSpaceDelims=1
+
+
+" RAINBOW_PARENTHESES[æ‹¬å·é«˜äº®]
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+" ä¸åŠ å…¥è¿™è¡Œ, é˜²æ­¢é»‘è‰²æ‹¬å·å‡ºç°, å¾ˆéš¾è¯†åˆ«
+" \ ['black',       'SeaGreen3'],
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
+" DELIMITMATE[ç¬¦å·è‡ªåŠ¨è¡¥å…¨]
+" for python docstring ", ç‰¹åˆ«æœ‰ç”¨
+au FileType python let b:delimitMate_nesting_quotes = ['"']
+" å…³é—­æŸäº›ç±»å‹æ–‡ä»¶çš„è‡ªåŠ¨è¡¥å…¨
+"au FileType mail let b:delimitMate_autoclose = 0
 "}}}
