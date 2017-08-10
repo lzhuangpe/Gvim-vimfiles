@@ -6,13 +6,13 @@ let g:mapleader = ','
 
 
 set rtp+=$HOME/vimfiles/bundle
-call vundle#begin('$HOME/vimfiles/bundle/')
+call vundle#begin('$HOME/vimfiles/my_plugin/')
 
 " YouCompleteMe
 Plugin 'YouCompleteMe'
 
 " 插件管理
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
 " 文件管理
 Plugin 'scrooloose/nerdtree'
 " 状态栏 
@@ -142,10 +142,10 @@ let g:FoldMethod = 0
 map <leader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
     if g:FoldMethod == 0
-        exe "normal! zm"
+        exe "normal! zM"
         let g:FoldMethod = 1
     else
-        exe "normal! zr"
+        exe "normal! zR"
         let g:FoldMethod = 0
     endif
 endfun
@@ -758,12 +758,12 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 
     " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
     " old version
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/vimfiles/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+    if !empty(glob("~/vimfiles/my_plugin/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
+        let g:ycm_global_ycm_extra_conf = "~/vimfiles/my_plugin/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
     endif
     " new version
-    if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-        let g:ycm_global_ycm_extra_conf = "~/vimfiles/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+    if !empty(glob("~/vimfiles/my_plugin/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
+        let g:ycm_global_ycm_extra_conf = "~/vimfiles/my_plugin/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
     endif
 
     " 直接触发自动补全 insert模式下
