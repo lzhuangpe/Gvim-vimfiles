@@ -142,10 +142,10 @@ let g:FoldMethod = 0
 map <leader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
     if g:FoldMethod == 0
-        exe "normal! zM"
+        exe "normal! zm"
         let g:FoldMethod = 1
     else
-        exe "normal! zR"
+        exe "normal! zr"
         let g:FoldMethod = 0
     endif
 endfun
@@ -235,9 +235,9 @@ set formatoptions+=B
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Monaco:h14
+    set guifont=宋体:h14
     if has("gui_gtk2")   "GTK2
-        set guifont=Monaco\ 12,Monospace\ 12
+        set guifont=宋体\ 12,Monospace\ 12
     endif
     set guioptions-=T
     set guioptions+=e
@@ -256,8 +256,6 @@ set background=dark
 set t_Co=256
 colorscheme solarized
 
-" 字体设置
-set guifont="宋体":h11
 
 " 设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
@@ -382,17 +380,10 @@ nnoremap <F3> :set list! list?<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
 
 
-" F6 语法开关，关闭语法可以加快大文件的展示
-nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
-
-set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
-                                "    paste mode, where you can paste mass data
-                                "    that won't be autoindented
-
+" F5 set paste问题已解决, 粘贴代码前不需要按F5了
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
 
-" F5 set paste问题已解决, 粘贴代码前不需要按F5了
 " F5 粘贴模式paste_mode开关,用于有格式的代码粘贴
 " Automatically set paste mode in Vim when pasting in insert mode
 function! XTermPasteBegin()
@@ -401,6 +392,16 @@ function! XTermPasteBegin()
   return ""
 endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
+                                "    paste mode, where you can paste mass data
+                                "    that won't be autoindented
+
+
+" F6 语法开关，关闭语法可以加快大文件的展示
+nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+
+
 
 " 分屏窗口移动, Smart way to move between windows
 map <C-j> <C-W>j
@@ -691,7 +692,6 @@ let g:closetag_html_style=1
 " 设置NERDCOMMENTER[快速注释]
 " 注释的时候自动加个空格, 强迫症必配
 let g:NERDSpaceDelims=1
-
 
 " RAINBOW_PARENTHESES[括号高亮]
 let g:rbpt_colorpairs = [
