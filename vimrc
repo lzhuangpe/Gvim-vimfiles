@@ -9,7 +9,7 @@ set rtp+=$HOME/vimfiles/bundle
 call vundle#begin('$HOME/vimfiles/my_plugin/')
 
 " YouCompleteMe
-" Plugin 'YouCompleteMe'
+Plugin 'YouCompleteMe'
 
 " 插件管理
 " Plugin 'VundleVim/Vundle.vim'
@@ -235,9 +235,10 @@ set formatoptions+=B
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=宋体:h14
+    set guifont=YaHei_Consolas_Hybrid:h10
     if has("gui_gtk2")   "GTK2
-        set guifont=宋体\ 12,Monospace\ 12
+        set guifont=monospace\ 9
+
     endif
     set guioptions-=T
     set guioptions+=e
@@ -729,9 +730,8 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 "}}}
 
 
-" ################### 自动补全 ###################
 
-" YouCompleteMe {{{
+" YouCompleteMe[代码提示] {{{
     "youcompleteme  默认tab  s-tab 和自动补全冲突
     "let g:ycm_key_list_select_completion=['<c-n>']
     let g:ycm_key_list_select_completion = ['<Down>']
