@@ -20,7 +20,7 @@ Plugin 'vim-airline/vim-airline'
 " 文件搜索 
 Plugin 'kien/ctrlp.vim'
 " 快速执行
-Plugin 'thinca/vim-quickrun'
+" Plugin 'thinca/vim-quickrun'
 " 成对标签补全
 Plugin 'docunext/closetag.vim'
 " 快速注释
@@ -616,9 +616,9 @@ function! AutoSetFileHead()
 
     "如果文件类型为python
     if &filetype == 'python'
-        " call setline(1, "\#!/usr/bin/env python")
+        call setline(1, "\#!/usr/bin/env python")
         " call append(1, "\# encoding: utf-8")
-        call setline(1, "\# -*- coding: utf-8 -*-")
+        call setline(2, "\# -*- coding: utf-8 -*-")
     endif
 
     normal G
@@ -675,16 +675,42 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 
 
-" 设置QUICKRUN[快速执行]
-let g:quickrun_config = {
-\   "_" : {
-\       "outputter" : "message",
-\   },
-\}
-let g:quickrun_no_default_key_mappings = 1
-nmap <Leader>r <Plug>(quickrun)
-map <F10> :QuickRun<CR>
+" " 设置QUICKRUN[快速执行]
+" let g:quickrun_config = {
+" \   "_" : {
+" \       "outputter" : "message",
+" \   },
+" \}
+" let g:quickrun_no_default_key_mappings = 1
+" nmap <Leader>r <Plug>(quickrun)
+" map <F10> :QuickRun<CR>
 
+map <F10> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %<"
+        exec "!time ./%<"
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time bash %
+    elseif &filetype == 'python'
+        exec "!python %"
+    elseif &filetype == 'html'
+        exec "!firefox % &"
+    elseif &filetype == 'go'
+"        exec "!go build %<"
+        exec "!time go run %"
+    elseif &filetype == 'mkd'
+        exec "!~/.vim/markdown.pl % > %.html &"
+        exec "!firefox %.html &"
+    endif
+endfunc
 
 " 设置CLOSETAG[成对标签补全]
 let g:closetag_html_style=1
@@ -774,3 +800,5 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
         \ 'gitcommit' : 1,
         \}
 " }}}
+
+
