@@ -9,7 +9,7 @@ set rtp+=$HOME/vimfiles/bundle
 call vundle#begin('$HOME/vimfiles/my_plugin/')
 
 " YouCompleteMe
-Plugin 'YouCompleteMe'
+" Plugin 'YouCompleteMe'
 
 " 插件管理
 " Plugin 'VundleVim/Vundle.vim'
