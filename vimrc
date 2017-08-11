@@ -8,11 +8,11 @@ let g:mapleader = ','
 set rtp+=$HOME/vimfiles/bundle
 call vundle#begin('$HOME/vimfiles/my_plugin/')
 
-" YouCompleteMe
+" 自动补全
 Plugin 'YouCompleteMe'
 
-" 插件管理
-" Plugin 'VundleVim/Vundle.vim'
+" 安装主题
+Plugin 'altercation/vim-colors-solarized'
 " 文件管理
 Plugin 'scrooloose/nerdtree'
 " 状态栏 
@@ -29,6 +29,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/rainbow_parentheses.vim'
 " 符号自动补全
 Plugin 'Raimondi/delimitMate'
+" PYTHON语法检查
+Plugin 'KEVINW/PYFLAKES-VIM' 
 call vundle#end()
 filetype plugin indent on
 
