@@ -29,8 +29,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/rainbow_parentheses.vim'
 " 符号自动补全
 Plugin 'Raimondi/delimitMate'
-" PYTHON语法检查
-Plugin 'KEVINW/PYFLAKES-VIM' 
 call vundle#end()
 filetype plugin indent on
 
