@@ -22,10 +22,10 @@ Plugin 'kien/rainbow_parentheses.vim'
 " 符号自动补全
 Plugin 'Raimondi/delimitMate'
 " 语法检查
- " Plugin 'vim-syntastic/syntastic'
+"  " Plugin 'vim-syntastic/syntastic'
 " 快速插入自定义代码段
  " Plugin 'honza/vim-snippets'
- " Plugin 'SirVer/ultisnips'
+"  " Plugin 'SirVer/ultisnips'
 " python语法高亮
  " Plugin 'hdima/python-syntax'
 call vundle#end()
