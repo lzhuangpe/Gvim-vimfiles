@@ -13,6 +13,9 @@ endif
 
 "{{{基础设置
 
+"非兼容模式
+set nocompatible    
+
 " 开启语法高亮
 syntax on
 " history存储容量
@@ -195,6 +198,12 @@ set helplang=cn
 "set enc=2byte-gb18030
 " 下面这句只影响普通模式 (非图形界面) 下的 Vim
 set termencoding=utf-8
+
+" vim的菜单乱码解决
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+" vim提示信息乱码的解决
+language messages zh_CN.utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac

@@ -19,6 +19,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/rainbow_parentheses.vim'
 " 符号自动补全
 Plug 'Raimondi/delimitMate'
+
 call plug#end()
 
 
