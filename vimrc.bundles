@@ -8,7 +8,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline-themes'
 " 状态栏 
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline'
 " 文件搜索 
 Plug 'kien/ctrlp.vim'
 " 成对标签补全
@@ -19,10 +18,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/rainbow_parentheses.vim'
 " 符号自动补全
 Plug 'Raimondi/delimitMate'
-" markdown 语法
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
 
+
+" HTML 相关插件
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -187,4 +186,9 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
         \ 'tagbar' : 1,
         \ 'gitcommit' : 1,
         \}
+" }}}
+
+
+" {{{ 设置 Emmet
+let g:user_emmet_expandabbr_key = '<C-E>'
 " }}}
